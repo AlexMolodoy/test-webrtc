@@ -1,7 +1,6 @@
 import { io } from "socket.io-client"
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const options: any = {
+const options: Record<string, boolean | string | number | string[ ]> = {
     'force new connection': true,
     reconnectionAttempts: 'Infinity',
     timeout: 10000,

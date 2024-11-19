@@ -1,24 +1,22 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import Room from './pages/Room';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Room from "./pages/Room";
 
 function App() {
-
   return (
     <>
-     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        
-        <Route path="/room/:id" element={<Room />} />
-        
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-     
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/rooms/:id" element={<Room />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
